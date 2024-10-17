@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/styles.css">
+    <title><%= hero.name %></title>
+</head>
+<body>
+    <h1><%= hero.name %></h1>
+    <img src="<%= hero.image.url %>" alt="<%= hero.name %>">
+    <p>ID: <%= hero.id %></p>
+    <p>Nombre completo: <%= hero.biography['full-name'] %></p>
+    <p>Estadísticas de poder: <%= JSON.stringify(hero.powerstats) %></p>
+    <!-- Agrega más campos según lo requerido -->
+    <a href="/superheroes/<%= hero.previousId %>">Anterior</a>
+    <a href="/superheroes/<%= hero.nextId %>">Siguiente</a>
+</body>
+</html>
